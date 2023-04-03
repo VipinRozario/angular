@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230330 16:51:04.529" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo" source="C:\Users\w132910\OneDrive - Worldline\Bureau\Demo\demo.robot">
+<kw name="login" library="common_userdefinedkeywords" type="SETUP">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230330 16:51:04.675" endtime="20230330 16:51:04.675"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://demo.automationtesting.in/Register.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230330 16:51:04.676" level="INFO">Opening browser 'chrome' to base url 'http://demo.automationtesting.in/Register.html'.</msg>
+<status status="PASS" starttime="20230330 16:51:04.675" endtime="20230330 16:51:08.978"/>
+</kw>
+<status status="PASS" starttime="20230330 16:51:04.662" endtime="20230330 16:51:08.979"/>
+</kw>
+<test id="s1-t1" name="sample" line="11">
+<kw name="user clicks radiobutton" library="common_userdefinedkeywords">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230330 16:51:08.979" endtime="20230330 16:51:10.120"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230330 16:51:10.120" endtime="20230330 16:51:10.120"/>
+</kw>
+<kw name="Page Should Contain Radio Button" library="SeleniumLibrary">
+<arg>xpath:(//input[@name='radiooptions'])</arg>
+<doc>Verifies radio button ``locator`` is found from current page.</doc>
+<msg timestamp="20230330 16:51:20.181" level="INFO">Current page contains radio button 'xpath:(//input[@name='radiooptions'])'.</msg>
+<status status="PASS" starttime="20230330 16:51:10.120" endtime="20230330 16:51:20.181"/>
+</kw>
+<kw name="Page Should Not Contain Radio Button" library="SeleniumLibrary">
+<arg>xpath:(//input[@name='radiooptions123'])</arg>
+<doc>Verifies radio button ``locator`` is not found from current page.</doc>
+<msg timestamp="20230330 16:51:22.195" level="INFO">Current page does not contain radio button 'xpath:(//input[@name='radiooptions123'])'.</msg>
+<status status="PASS" starttime="20230330 16:51:20.181" endtime="20230330 16:51:22.195"/>
+</kw>
+<kw name="Radio Button Should Not Be Selected" library="SeleniumLibrary">
+<arg>radiooptions</arg>
+<doc>Verifies radio button group ``group_name`` has no selection.</doc>
+<msg timestamp="20230330 16:51:22.195" level="INFO">Verifying radio button 'radiooptions' has no selection.</msg>
+<status status="PASS" starttime="20230330 16:51:22.195" endtime="20230330 16:51:28.236"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>radiooptions</arg>
+<arg>FeMale</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230330 16:51:28.236" level="INFO">Selecting 'FeMale' from radio button 'radiooptions'.</msg>
+<status status="PASS" starttime="20230330 16:51:28.236" endtime="20230330 16:51:34.302"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230330 16:51:36.303" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230330 16:51:34.302" endtime="20230330 16:51:36.303"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@value="Male"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 16:51:36.303" level="INFO">Clicking element '//*[@value="Male"]'.</msg>
+<status status="PASS" starttime="20230330 16:51:36.303" endtime="20230330 16:51:40.368"/>
+</kw>
+<status status="PASS" starttime="20230330 16:51:08.979" endtime="20230330 16:51:40.368"/>
+</kw>
+<status status="PASS" starttime="20230330 16:51:08.979" endtime="20230330 16:51:40.368"/>
+</test>
+<kw name="Logout" library="common_userdefinedkeywords" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>im in logout</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230330 16:51:40.373" endtime="20230330 16:51:40.373"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230330 16:51:50.373" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230330 16:51:40.373" endtime="20230330 16:51:50.373"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230330 16:51:50.373" endtime="20230330 16:51:54.444"/>
+</kw>
+<status status="PASS" starttime="20230330 16:51:40.373" endtime="20230330 16:51:54.444"/>
+</kw>
+<doc>Clicks in Robot Framework</doc>
+<status status="PASS" starttime="20230330 16:51:04.534" endtime="20230330 16:51:54.444"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

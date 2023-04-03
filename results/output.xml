@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230330 14:51:58.292" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo" source="C:\Users\w132910\OneDrive - Worldline\Bureau\Demo">
+<suite id="s1-s1" name="Demo" source="C:\Users\w132910\OneDrive - Worldline\Bureau\Demo\demo.robot">
+<test id="s1-s1-t1" name="sample" line="13">
+<kw name="login" library="common_userdefinedkeywords">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230330 14:51:58.522" endtime="20230330 14:51:58.523"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://phptravels.com/demo/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230330 14:51:58.524" level="INFO">Opening browser 'chrome' to base url 'https://phptravels.com/demo/'.</msg>
+<status status="PASS" starttime="20230330 14:51:58.523" endtime="20230330 14:52:02.141"/>
+</kw>
+<status status="PASS" starttime="20230330 14:51:58.522" endtime="20230330 14:52:02.141"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@name='first_name']</arg>
+<arg>hi</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 14:52:02.145" level="INFO">Typing text 'hi' into text field 'xpath://*[@name='first_name']'.</msg>
+<status status="PASS" starttime="20230330 14:52:02.143" endtime="20230330 14:52:05.224"/>
+</kw>
+<kw name="user clicks button" library="common_userdefinedkeywords">
+<arg>xpath:sample</arg>
+<arg>name</arg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>executed button</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230330 14:52:05.225" endtime="20230330 14:52:05.226"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${xpath}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230330 14:52:05.226" endtime="20230330 14:52:05.226"/>
+</kw>
+<status status="PASS" starttime="20230330 14:52:05.224" endtime="20230330 14:52:05.227"/>
+</kw>
+<kw name="user clicks dropdown" library="common_userdefinedkeywords">
+<kw name="Log To Console" library="BuiltIn">
+<arg>executed dropdown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230330 14:52:05.229" endtime="20230330 14:52:05.229"/>
+</kw>
+<status status="PASS" starttime="20230330 14:52:05.228" endtime="20230330 14:52:05.229"/>
+</kw>
+<kw name="Logout" library="common_userdefinedkeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230330 14:52:05.230" endtime="20230330 14:52:08.483"/>
+</kw>
+<status status="PASS" starttime="20230330 14:52:05.229" endtime="20230330 14:52:08.483"/>
+</kw>
+<status status="PASS" starttime="20230330 14:51:58.521" endtime="20230330 14:52:08.484"/>
+</test>
+<doc>Clicks in Robot Framework</doc>
+<status status="PASS" starttime="20230330 14:51:58.349" endtime="20230330 14:52:08.486"/>
+</suite>
+<status status="PASS" starttime="20230330 14:51:58.308" endtime="20230330 14:52:08.489"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Demo">Demo.Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
